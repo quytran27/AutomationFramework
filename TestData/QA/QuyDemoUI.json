@@ -1,0 +1,16 @@
+[
+{
+	"scenario":{
+	"lastName":"Tran",
+	"firstName":"Quy",
+	"expectedErrorMessage":"Please complete all required fields."
+	}	
+},
+{
+	"scenario":{
+	"lastName":"Tran",
+	"firstName":"Tuyen",
+	"expectedErrorMessage":"Please complete all required fields"
+	}	
+}
+]

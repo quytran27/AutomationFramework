@@ -1,0 +1,9 @@
+test_case_id,data_type,data_file_path
+tc002_VerifyGoogleSearchPageWithData,CSV,GoogleSearchText.csv
+tc003_VerifyGetPostObjectByIdSuccessfully,CSV,RestAPIDemo.csv
+tc005_VerifyErrorMessage,CSV,QuyDemoUI.csv
+tc006_VerifyCreatePostFromFiles,CSV,QuyDemoPost.csv
+tc007_VerifyErrorMessageFromJsonFiles,JSON,QuyDemoUI.json
+tc008_VerifyCreatePostFromJsonFiles,JSON,QuyDemoAPI.json
+tc009_VerifyValidExistingData,JSON,Valid_Jsonplaceholder.json
+tc010_VerifyUnExistingData,JSON,InValid_Jsonplaceholder.json

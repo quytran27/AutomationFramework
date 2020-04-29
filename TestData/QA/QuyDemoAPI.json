@@ -1,0 +1,18 @@
+[
+	{
+		"postInfo": {
+			"userId":1,
+			"id":2,
+			"title": "This is the first title",
+			"body": "This is the second Body"
+		}
+	},
+	{
+		"postInfo":{
+			"userId":3,
+			"id":4,
+			"title":"This is the second title",
+			"body":"This is the second Body"
+		}
+	}
+]

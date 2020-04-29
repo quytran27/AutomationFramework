@@ -1,0 +1,10 @@
+target/
+.idea/
+.settings
+*.iml
+*.log
+.classpath
+.project
+TestResult/
+bin/
+/WebDriver/*.exe
