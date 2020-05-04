@@ -7,12 +7,7 @@
 <parameter name="dataMappingFileName" value="DataMappings.csv"></parameter>
 <test name="Web UI Test Demo" verbose="1">
     <classes>
-        <class name="demo.web.ui.Quy_UIDemo"></class>
-    </classes>
-</test>
-<test name="Web API Test Demo" verbose="1">
-    <classes>
-        <class name="demo.web.api.Quy_APIDemo"></class>
+        <class name="demo.web.ui.Quy_LoginTest"></class>
     </classes>
 </test>
 </suite>

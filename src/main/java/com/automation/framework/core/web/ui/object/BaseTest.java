@@ -37,7 +37,7 @@ public class BaseTest extends OrgBaseTest {
     @AfterTest
     public void runAfterTest()  {
         closeBrowser();
-        ExtentReportManager.getReporter().flush();
+        //ExtentReportManager.getReporter().flush();
     }
 
     public void closeBrowser() {
@@ -49,13 +49,10 @@ public class BaseTest extends OrgBaseTest {
     }
 
 
-    @BeforeMethod
-    public void runBeforeMethod() {
-        logger = ExtentTestManager.startTest("tc005_VerifyErrorMessage");
-    }
-    @AfterMethod
-    public void getResult(ITestResult result) {
-        ExtentTestManager.getResult(result, logger, driver, true);
-    }
+
+//    @AfterMethod
+//    public void getResult(ITestResult result) {
+//        ExtentTestManager.getResult(result, logger, driver, true);
+//    }
 
 }
