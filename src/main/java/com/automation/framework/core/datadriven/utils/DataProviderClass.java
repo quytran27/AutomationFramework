@@ -3,14 +3,13 @@ package com.automation.framework.core.datadriven.utils;
 import com.automation.framework.core.base.OrgBaseTest;
 import com.automation.framework.core.datadriven.objects.DataMapping;
 import org.apache.log4j.Logger;
+import org.testng.annotations.DataProvider;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import org.testng.annotations.DataProvider;
 
 public class DataProviderClass {
     private static final Logger LOGGER = Logger.getLogger(DataProviderClass.class);

@@ -1,25 +1,19 @@
 package com.automation.framework.core.web.ui.object;
 
-import com.automation.framework.core.Reports.ExtentReportManager;
-import com.automation.framework.core.Reports.ExtentTestManager;
 import com.automation.framework.core.base.OrgBaseTest;
+import com.automation.test.libraries.web.ui.pageobjects.TinyPulseLoginPage;
 import com.aventstack.extentreports.ExtentTest;
-import com.lowagie.text.DocumentException;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
-import java.io.*;
+import java.io.File;
 
 public class BaseTest extends OrgBaseTest {
     private static final Logger LOGGER = Logger.getLogger(BaseTest.class);
-    ExtentTest logger;
     protected WebDriver driver;
 
     @BeforeTest
@@ -32,12 +26,19 @@ public class BaseTest extends OrgBaseTest {
 
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
+        /**
+         * Login with valid credential
+         */
+        TinyPulseLoginPage TinyPulseLoginPage = new TinyPulseLoginPage(driver);
+        TinyPulseLoginPage.navigateToURL("https://staging.tinyserver.info/signin");
+        TinyPulseLoginPage.getUsernameTxtField().sendKeys("minhquy27910@gmail.com", false);
+        TinyPulseLoginPage.getPasswordTxtField().sendKeys("1234qwerASDF", true);
+        TinyPulseLoginPage.waitForPageLoad();
     }
 
     @AfterTest
-    public void runAfterTest()  {
+    public void runAfterTest() {
         closeBrowser();
-        //ExtentReportManager.getReporter().flush();
     }
 
     public void closeBrowser() {
@@ -47,7 +48,6 @@ public class BaseTest extends OrgBaseTest {
             LOGGER.error(ex.getMessage());
         }
     }
-
 
 
 //    @AfterMethod

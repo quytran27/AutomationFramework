@@ -1,9 +1,11 @@
 package com.automation.framework.core.web.ui.object;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+
+import java.util.Iterator;
+import java.util.List;
 
 import static java.lang.Thread.sleep;
 
@@ -47,6 +49,20 @@ public class WebObject {
             baseObj.info("Test data is submitted");
         }
     }
+
+    public String selectByPartialText(String partialText) {
+        String itemText = null;
+        List<WebElement> options = webElement.findElements(By.xpath("//h4[contains(text(),'" + partialText + "')]"));
+        for (Iterator var4 = options.iterator(); var4.hasNext(); ) {
+            WebElement option = (WebElement) var4.next();
+            itemText = option.getText();
+            option.click();
+            baseObj.info("'" + partialText + "' is selected");
+        }
+        return itemText;
+    }
+
+
 }
 
 

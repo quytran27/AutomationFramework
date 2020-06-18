@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="allSuites" verbose="1">
-<parameter name="testDataFolder" value="TestData"></parameter>
-<parameter name="environment" value="QA"></parameter>
-<parameter name="dataMappingFileName" value="DataMappings.csv"></parameter>
-<test name="Web UI Test Demo" verbose="1">
-    <classes>
-        <class name="demo.web.ui.Quy_LoginTest"></class>
-    </classes>
-</test>
+    <parameter name="testDataFolder" value="TestData"></parameter>
+    <parameter name="environment" value="QA"></parameter>
+    <parameter name="dataMappingFileName" value="DataMappings.csv"></parameter>
+    <test name="Tiny Pulse Add people test" verbose="1">
+        <classes>
+            <class name="demo.web.ui.Auto_Add_People"></class>
+        </classes>
+    </test>
 </suite>
